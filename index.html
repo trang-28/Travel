@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.jpeg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Travel</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+        <div class="container container-fluid mt-0">
+          <a class="navbar-brand" href="#">
+            Vacation
+            <span>Travel Agency</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            Menu
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="destination.html">Destination</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Book Now</button>
+                </li>
+              </ul>
+        </div>
+        </div>
+       
+    </nav>
+    <div class="header" style="background-image: url(./assets/img/header.jpg)">
+        
+        <div class="header-liner"></div>
+        
+        <div class="row container align-items-center justify-content-center search-content" > 
+            <div class="col-md-9 play  align-items-center justify-content-center">
+                <button type="button" class="btn btn-primary mb-4 " data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+                <p>Travel to the any corner of the world, without going around in circles</p>
+                <h1 class="align-items-center justify-content-center">Make Your Tour Amazing With Us</h1>
+                <!-- Modal -->
+                <div class="modal fade " id="staticBackdrop1" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: black">
+                    <div class="modal-dialog  modal-dialog-centered " role="document">
+                        <div class="modal-content ">
+                            <h5 class="modal-title"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                            </button>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe width="1000" height="600" src="https://www.youtube.com/embed/0G7BmZ7QyKI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row container align-items-center justify-content-center" > 
+            <div class="search col-md-12">
+                <form action="">
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="inputDestination4" class="form-label">Destination</label>
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Search place" aria-label="Search place" aria-describedby="addon-wrapping">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <label for="inputCheckin4" class="form-label">Ckeck-in date</label>
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <i class="fa-solid fa-calendar"></i>
+                                </span>
+                                <input type="text" id="my_date_picker1" class="form-control" placeholder="Check-in Date" aria-label="Search place" aria-describedby="addon-wrapping">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <label for="inputCheckout4" class="form-label">Ckeck-out date</label>
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <i class="fa-solid fa-calendar"></i>
+                                </span>
+                                <input type="text" id="my_date_picker2" class="form-control" placeholder="Check-out Date" aria-label="Search place" aria-describedby="addon-wrapping">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <label class="form-label" for="inputGroupSelect01">Price limit</label>
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </span>
+                                <select class="form-select" id="inputGroupSelect01">
+                                    <option selected>$5,000</option>
+                                    <option value="1">$10,000</option>
+                                    <option value="2">$50,000</option>
+                                    <option value="3">$100,000</option>
+                                    <option value="3">$200,000</option>
+                                    <option value="3">$300,000</option>
+                                    <option value="3">$400,000</option>
+                                    <option value="3">$500,000</option>
+                                    <option value="3">$600,000</option>
+                                    <option value="3">$700,000</option>
+                                    <option value="3">$800,000</option>
+                                    <option value="3">$900,000</option>
+                                    <option value="3">$1000,000</option>
+                                    <option value="3">$2000,000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <button class="btn btn-outline-success my-2 my-sm-0 search-btn" type="submit">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <section class="content-vacation bg-light ">
+            <div class="container">
+                <div class="row adventure">
+                    <div class="col-md-6">
+                        <div class="row row-cols-2 adventure-content">
+                            <div class="col-md-6">
+                                <div class="activity" >
+                                    <i class="fa-solid fa-people-group"></i>
+                                    <h4 class="activity-title">Activities</h4>
+                                    <div class="activity-body">
+                                      <p class="activity-text">
+                                        A small river named Duden flows by their place and supplies it with the necessary
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-md-6">
+                                <div class="travel-arr">
+                                    <i class="fa-solid fa-plane"></i>
+                                    <h4 class="travel-arr-title">Travel Arrangements</h4>
+                                    <div class="travel-arr-body">
+                                      <p class="travel-arr-text">
+                                        A small river named Duden flows by their place and supplies it with the necessary
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="private">
+                                    <i class="fa-brands fa-guilded"></i>
+                                    <h4 class="private-title">Private Guide</h4>
+                                    <div class="private-body">
+                                      <p class="private-text">
+                                        A small river named Duden flows by their place and supplies it with the necessary
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="location">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                    <h4 class="location-title">Location Manager</h4>
+                                    <div class="location-body">
+                                      <p class="location-text">
+                                        A small river named Duden flows by their place and supplies it with the necessary
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 search-destination">
+                        <h2>
+                            It's time to start your adventure
+                        </h2>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <a href="#">
+                            <button class="btn btn-outline-success my-2 my-sm-0 search-adventure-btn" type="submit">Search Destination</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tour-memorable" >
+            <div class="container">
+                <div class="row content-tour">
+                    <div class="col-md-6 content-tour-img" style="background-image:url(./assets/img/tour.webp)">
+                        
+                    </div>
+                    <div class="col-md-6 content-tour-text">
+                        <h2>
+                            Make Your Tour Memorable and Safe With Us
+                        </h2>
+                        <p>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. 
+                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                        </p>
+                        <div class="row statistics">
+                            <div class="col-md-4 align-items-center justify-content-center">
+                                <strong id="number">300</strong>
+                                <span>Successful Tours</span>
+                            </div>
+                            <div class="col-md-4 align-items-center justify-content-center">
+                                <strong id="number1">24,000</strong>
+                                <span>Happy Tourist</span>
+                            </div>
+                            <div class="col-md-4 align-items-center justify-content-center">
+                                <strong id="number2">200</strong>
+                                <span>Place Explored</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="best-place content-vacation">
+            <div class="container">
+                <div class="best-place-title align-items-center justify-content-center d-flex">
+                    <h2>Best Place Destination</h2>
+                </div>
+                <div class="row content-best-place">
+                    <a class="col-md-3 content-best-img" href="#" style="padding-left:0">
+                        <div class="space img" style="background-image:url(./assets/img/best-place-1.webp)">
+                           
+                            <div class="text">
+                                <h3>Singapore</h3>
+                                <span>8 Tours</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="col-md-3 content-best-img">
+                        <div class="space img" style="background-image:url(./assets/img/best-place-2.webp)">
+                            <div class="text">
+                                <h3>Canada</h3>
+                                <span>2 Tours</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="col-md-3 content-best-img">
+                        <div class="space img" style="background-image:url(./assets/img/best-place-3.webp)">
+                            <div class="text">
+                                <h3>Thailand</h3>
+                                <span>3 Tours</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="col-md-3 content-best-img">
+                        <div class="space img" style="background-image:url(./assets/img/best-place-4.webp)">
+                            <div class="text">
+                                <h3>Autralia</h3>
+                                <span>5 Tours</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="tour-destination">
+            <div class="container container-best-place">
+                <div class="tour-destination-title align-items-center justify-content-center d-flex">
+                    <h2>Tour Destination</h2>
+                </div>
+                <div class="row row-cols-3 content-tour-destination">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <a href=""><div class="card-img-top img" style="background-image:url(./assets/img/tour-destination-1.webp)"></div></a>
+                            
+                            <div class="card-body">
+                                <span class="price">$300/person</span>
+                                <span class="days">8 Days Tour</span>
+                              <a href="" class="card-title-text">
+                                <h5 class="card-title">Bali, Indonesia</h5>
+                              </a>
+                              <p class="card-text">
+                                <i class="fa-solid fa-map"></i>
+                                Bali, Indonesia
+                              </p>
+                              <p class="card-text">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-bath"></i>
+                                        </span>
+                                        2
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-bed"></i>
+                                        </span>
+                                        3
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-mountain-sun"></i>
+                                        </span>
+                                        Near Moutain
+                                    </li>
+                                  </ul>
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <a href=""><div class="card-img-top img" style="background-image:url(./assets/img/tour-destination-2.webp)"></div></a>
+                            
+                            <div class="card-body">
+                                <span class="price">$300/person</span>
+                                <span class="days">10 Days Tour</span>
+                              <a href="" class="card-title-text">
+                                <h5 class="card-title">Bali, Indonesia</h5>
+                              </a>
+                              <p class="card-text">
+                                <i class="fa-solid fa-map"></i>
+                                Bali, Indonesia
+                              </p>
+                              <p class="card-text">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-bath"></i>
+                                        </span>
+                                        2
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-bed"></i>
+                                        </span>
+                                        3
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-umbrella-beach"></i>
+                                        </span>
+                                        Near Beach
+                                    </li>
+                                  </ul>
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                           <a href="'"><div class="card-img-top img" style="background-image:url(./assets/img/tour-destination-3.webp)"></div></a> 
+                            
+                            <div class="card-body">
+                                <span class="price">$300/person</span>
+                                <span class="days">7 Days Tour</span>
+                              <a href="" class="card-title-text">
+                                <h5 class="card-title">Bali, Indonesia</h5>
+                              </a>
+                              <p class="card-text">
+                                <i class="fa-solid fa-map"></i>
+                                Bali, Indonesia
+                              </p>
+                              <p class="card-text">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-bath"></i>
+                                        </span>
+                                        2
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-bed"></i>
+                                        </span>
+                                        3
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-umbrella-beach"></i>
+                                        </span>
+                                        Near Beach
+                                    </li>
+                                  </ul>
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 none">
+                        <div class="card">
+                            <a href=""><div class="card-img-top img" style="background-image:url(./assets/img/tour-destination-4.webp)"></div></a>
+                            
+                            <div class="card-body">
+                                <span class="price">$300/person</span>
+                                <span class="days">8 Days Tour</span>
+                              <a href="" class="card-title-text">
+                                <h5 class="card-title">Bali, Indonesia</h5>
+                              </a>
+                              <p class="card-text">
+                                <i class="fa-solid fa-map"></i>
+                                Bali, Indonesia
+                              </p>
+                              <p class="card-text">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-bath"></i>
+                                        </span>
+                                        2
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-bed"></i>
+                                        </span>
+                                        3
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-umbrella-beach"></i>
+                                        </span>
+                                        Near Beach
+                                    </li>
+                                  </ul>
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 none">
+                        <div class="card">
+                            <a href=""><div class="card-img-top img" style="background-image:url(./assets/img/tour-destination-5.webp)"></div></a>
+                            
+                            <div class="card-body">
+                                <span class="price">$300/person</span>
+                                <span class="days">10 Days Tour</span>
+                              <a href="" class="card-title-text">
+                                <h5 class="card-title">Bali, Indonesia</h5>
+                              </a>
+                              <p class="card-text">
+                                <i class="fa-solid fa-map"></i>
+                                Bali, Indonesia
+                              </p>
+                              <p class="card-text">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-bath"></i>
+                                        </span>
+                                        2
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-bed"></i>
+                                        </span>
+                                        3
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-umbrella-beach"></i>
+                                        </span>
+                                        Near Beach
+                                    </li>
+                                  </ul>
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 none">
+                        <div class="card">
+                            <a href=""><div class="card-img-top img" style="background-image:url(./assets/img/tour-destination-6.webp)"></div></a>
+                            
+                            <div class="card-body">
+                                <span class="price">$300/person</span>
+                                <span class="days">7 Days Tour</span>
+                              <a href="" class="card-title-text">
+                                <h5 class="card-title">Bali, Indonesia</h5>
+                              </a>
+                              <p class="card-text">
+                                <i class="fa-solid fa-map"></i>
+                                Bali, Indonesia
+                              </p>
+                              <p class="card-text">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-bath"></i>
+                                        </span>
+                                        2
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-bed"></i>
+                                        </span>
+                                        3
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-umbrella-beach"></i>
+                                        </span>
+                                        Near Beach
+                                    </li>
+                                  </ul>
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tour-feedback content-vacation" style="background-image: url(./assets/img/background-tour-fb.webp)">
+            <div class="tour-feeback-content">
+                <div class="container container-best-place">
+                    <div class="tour-destination-title align-items-center justify-content-center d-flex">
+                        <h2>Tourist Feedback</h2>
+                    </div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper tour-feedback">
+                        <div class="swiper-slide">
+                            <div class="fb-content">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="fb-text d-flex align-items-center ">
+                                    <div class="fb-text-img" style="background-image: url(./assets/img/fb-3.webp)"></div>
+                                        <div class="fb-text-name">
+                                            <p class="name">Roger Scott</p>
+                                            <span class="position">Marketing Manager</span>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="fb-content">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="fb-text d-flex align-items-center ">
+                                    <div class="fb-text-img" style="background-image: url(./assets/img/fb-2.webp)"></div>
+                                    <div class="fb-text-name">
+                                        <p class="name">Roger Scott</p>
+                                        <span class="position">Marketing Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="fb-content">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="fb-text d-flex align-items-center ">
+                                    <div class="fb-text-img" style="background-image: url(./assets/img/fb-3.webp)"></div>
+                                    <div class="fb-text-name">
+                                        <p class="name">Roger Scott</p>
+                                        <span class="position">Marketing Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="fb-content">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="fb-text d-flex align-items-center ">
+                                    <div class="fb-text-img" style="background-image: url(./assets/img/fb-1.webp)"></div>
+                                    <div class="fb-text-name">
+                                        <p class="name">Roger Scott</p>
+                                        <span class="position">Marketing Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="fb-content">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="fb-text d-flex align-items-center ">
+                                    <div class="fb-text-img" style="background-image: url(./assets/img/fb-2.webp)"></div>
+                                    <div class="fb-text-name">
+                                        <p class="name">Roger Scott</p>
+                                        <span class="position">Marketing Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="fb-content">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="fb-text d-flex align-items-center ">
+                                    <div class="fb-text-img" style="background-image: url(./assets/img/fb-3.webp)"></div>
+                                    <div class="fb-text-name">
+                                        <p class="name">Roger Scott</p>
+                                        <span class="position">Marketing Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="fb-content">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="fb-text d-flex align-items-center ">
+                                    <div class="fb-text-img" style="background-image: url(./assets/img/fb-2.webp)"></div>
+                                    <div class="fb-text-name">
+                                        <p class="name">Roger Scott</p>
+                                        <span class="position">Marketing Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="recent-post content-vacation ">
+            <div class="container">
+                <div class="rencent-post-title align-items-center justify-content-center d-flex">
+                    <h2>Recent Post</h2>
+                </div>
+                <div class="row content-recent-post">
+                    <div class="col-md-4 content-post-img" href="#" >
+                        <div class="card">
+                            <a href=""><div class="card-img-top img" style="background-image:url(./assets/img/post-1.jpg)"></div></a>
+                            
+                            <div class="card-body">
+                                <div class="day-post d-flex align-items-center">
+                                    <div class="d">
+                                        <span class="day">21</span>
+                                    </div>
+                                   
+                                   <div class="y-m d-flex">
+                                    <span class="year">2019</span>
+                                    <span class="month">August</span>
+                                   </div>
+                                   
+                                </div>
+                                <div class="card-body-text">
+                                    <a href="" class="card-title-text">
+                                        <h5 class="card-title">Why Lead Generation is Key for Business Growth</h5>
+                                      </a>
+                                      <p class="card-text">
+                                        A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                      </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 content-post-img" href="#" >
+                        <div class="card">
+                            <a href=""><div class="card-img-top img" style="background-image:url(./assets/img/post-2.jpg)"></div></a>
+                            
+                            <div class="card-body">
+                                <div class="day-post d-flex align-items-center">
+                                    <div class="d">
+                                        <span class="day">21</span>
+                                    </div>
+                                   
+                                   <div class="y-m d-flex">
+                                    <span class="year">2019</span>
+                                    <span class="month">August</span>
+                                   </div>
+                                   
+                                </div>
+                                <div class="card-body-text">
+                                    <a href="" class="card-title-text">
+                                        <h5 class="card-title">Why Lead Generation is Key for Business Growth</h5>
+                                      </a>
+                                      <p class="card-text">
+                                        A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                      </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 content-post-img" href="#" >
+                        <div class="card">
+                            <a href=""><div class="card-img-top img" style="background-image:url(./assets/img/post-3.webp)"></div></a>
+                            
+                            <div class="card-body">
+                                <div class="day-post d-flex align-items-center">
+                                    <div class="d">
+                                        <span class="day">21</span>
+                                    </div>
+                                   
+                                   <div class="y-m d-flex">
+                                    <span class="year">2019</span>
+                                    <span class="month">August</span>
+                                   </div>
+                                   
+                                </div>
+                                <div class="card-body-text">
+                                    <a href="" class="card-title-text">
+                                        <h5 class="card-title">Why Lead Generation is Key for Business Growth</h5>
+                                      </a>
+                                      <p class="card-text">
+                                        A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                      </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer content-vacation" style="background-image: url(./assets/img/footer.webp);">
+            <div class="container">
+                <div class="row content-footer">
+                    <div class="col-md">
+                        <p class="footer-title">
+                            Vacation
+                        </p>
+                        <p class="footer-text">
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                        </p>
+                        <ul class="nav" >
+                            <li class="nav-item" data-aos-duration="1000">
+                              <a class="nav-link" href="#">
+                                  <span><i class="fa-brands fa-twitter"></i></span>
+                              </a>
+                            </li>
+                            <li class="nav-item" data-aos-duration="1500">
+                                <a class="nav-link" href="#">
+                                    <span><i class="fa-brands fa-facebook-f"></i></span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span><i class="fa-brands fa-instagram"></i></span>
+                                </a>
+                            </li>
+                          </ul>
+                    </div>
+                    <div class="col-md infor">
+                        <p class="footer-title">
+                            Infromation
+                        </p>
+                        <p class="footer-text">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <a href="">Online Enquiry</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">General Enquiries</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">Booking Conditions</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">Privacy and Policy</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">Refund Policy</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">Call Us</a>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-md exper">
+                        <p class="footer-title">
+                            Experience
+                        </p>
+                        <p class="footer-text">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <a href="">Adventure</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">Hotel and Restaurant</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">Beach</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">Nature</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">Camping</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">Party</a>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-md">
+                        <p class="footer-title">
+                            Have a Questions?
+                        </p>
+                        <div class="footer-text" >
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex">
+                                    <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                                    <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
+                                </li>
+                                <li class="list-group-item">
+                                   <a href="">
+                                    <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                                    <span>	+2 392 3929 210</span>
+                                   </a> 
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">
+                                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                                        <span>info@yourdomain.com</span>
+                                    </a> 
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./assets/script.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
