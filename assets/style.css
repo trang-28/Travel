@@ -743,10 +743,9 @@ p.about-text a:hover{
     color:#f9ab30
 }
 .col-md-9.play.align-items-center.justify-content-center.about-head {
-    padding-bottom: 48px;
+    padding-bottom: 112px;
     margin-top: calc(53% + 13px);
 }
-
 
 /* destination */
 
